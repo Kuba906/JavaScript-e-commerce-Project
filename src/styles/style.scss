@@ -1,26 +1,21 @@
 
 $border-color: #263a49;
+$black-color: black;
 
-*{
+*
+{
+    font-family: 'Jost', Arial;
+}
+body{
     margin: 0;
-    width: 100%;
-    height: auto;
-    
     
 }
-img {
-    width: 100%;
-    height: auto;
-
-  }
 .image{
-    width: 100%;
-    height: auto;
-
     background-image: url("https://via.placeholder.com/1920x550");
     background-size: auto 550px;
     height: 550px;
     background-position: center center;
+    font-weight: 500;
     
 }
 .nav-link{
@@ -35,6 +30,16 @@ height:438px;
 .logo{
    display:flex;
    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+.navbar-brand.abs
+{
+position: absolute;
+width: 100%;
+left: 0;
+text-align: center;
+}
 }
 @media (min-width: 768px) {
 .navbar-brand.abs
@@ -181,3 +186,74 @@ text-align: center;
         display: block;
         visibility: visible;
     }}
+    .items {
+        
+       
+        .Place {
+            padding: 10px;
+            img{
+                max-width: 100%;
+            }
+            
+        }
+    }
+    .all-products{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        button{
+            font-weight: 500;
+            background-color: #fff;
+            padding: 15px;
+            border: 2px solid $black-color;
+            
+        }
+    }
+    .newsletter{
+        margin:20px;
+        padding:10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+    }
+    input {
+        border-top-style: hidden;
+        border-right-style: hidden;
+        border-left-style: hidden;
+        border-bottom-style: groove;
+        border-bottom: 1px solid $black-color;
+        
+        }
+        .sub{
+            font-weight: bold;
+             text-decoration: underline;
+            vertical-align: -6px;
+        }
+    footer{
+        margin-top:50px;
+        .icons{
+            margin-bottom:10px;
+            img{
+                padding:10px;
+            }
+        }
+        .Policy{
+            padding:auto;
+            font-weight: 500;
+            span{
+                padding-right:10px
+            }
+        }
+    
+    }
+    .info{
+          display:flex;
+          justify-content: flex-end;
+          
+            
+                
+    }
+    .end{
+        margin: 50px 0;
+    }
