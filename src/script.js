@@ -1,9 +1,20 @@
-import daftcodeImgUrl from './assets/daftcode.png'
+$('#carousel-example').on('slide.bs.carousel', function (e) {
+  
+  var $e = $(e.relatedTarget);
+  var idx = $e.index();
+  var itemsPerSlide = 5;
+  var totalItems = $('.carousel-item').length;
 
-export default function() {
-  const section = document.createElement('section')
-  const img = document.createElement('img')
-  img.src = daftcodeImgUrl
-  section.appendChild(img)
-  document.body.appendChild(section)
-}
+  if (idx >= totalItems-(itemsPerSlide-1)) {
+      var it = itemsPerSlide - (totalItems - idx);
+      for (var i=0; i<it; i++) {
+         
+          if (e.direction=="left") {
+              $('.carousel-item').eq(i).appendTo('.carousel-inner');
+          }
+          else {
+              $('.carousel-item').eq(0).appendTo('.carousel-inner');
+          }
+      }
+  }
+});

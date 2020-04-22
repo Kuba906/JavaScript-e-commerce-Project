@@ -1,5 +1,5 @@
-import img from './assets/daftcode.png';
-import './styles/style.sass';
-import script from './script.js';
-
+import './styles/style.scss';
+import $ from 'jquery';
+import 'bootstrap';
+import script from './script.js'
 script();
