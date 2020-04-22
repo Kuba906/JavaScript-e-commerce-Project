@@ -24,5 +24,11 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "html-loader": "^1.1.0",
+    "jquery": "^3.5.0",
+    "popper.js": "^1.16.1"
+  }
 }

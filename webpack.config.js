@@ -1,18 +1,19 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+  
+const path = require('path')
+const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'my-first-webpack.bundle.js'
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist')
   },
-
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.(js|ts)x?$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -20,35 +21,40 @@ module.exports = {
           }
         }
       },
-
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
           'style-loader',
-          // Translates CSS into CommonJS
           'css-loader',
-          // Compiles Sass to CSS
           'sass-loader',
         ],
       },
-
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
+      },
+      {
+        test: /\.(jpe?g|png|svg|gif|ico|webp|eot|ttf|woff|woff2|pdf|mp4|webm)$/,
         use: [
           {
             loader: 'file-loader',
+            options: {
+              outputPath: 'Assets',
+            },
           },
         ],
       },
-      
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin({
-        template: './src/index.html'
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
     })
   ]
+}
 
-
-};
