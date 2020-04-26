@@ -1,5 +1,3 @@
-
-  
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 
@@ -22,12 +20,32 @@ module.exports = {
         }
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.(scss)$/,
         use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader',
-        ],
+          {
+   
+            loader: 'style-loader'
+          },
+          {
+        
+            loader: 'css-loader'
+          },
+          {
+      
+            loader: 'postcss-loader',
+            options: {
+              plugins: function () {
+                return [
+                  require('autoprefixer')
+                ];
+              }
+            }
+          },
+          {
+          
+            loader: 'sass-loader'
+          }
+        ]
       },
       {
         test: /\.html$/,
@@ -43,7 +61,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              outputPath: 'Assets',
+              outputPath: 'assets',
             },
           },
         ],
@@ -57,4 +75,3 @@ module.exports = {
     })
   ]
 }
-
