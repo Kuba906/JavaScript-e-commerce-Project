@@ -4,29 +4,28 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-   
-      
+
+
     <title>Hello, world!</title>
 </head>
 
 <body>
     <header class="image">
         <div class="logo"><img src="Assets/-e-kz-user.svg" alt="">
-             <img
-                src="Assets/-e-kz-bag.svg" alt=""></div>
+            <img src="Assets/-e-kz-bag.svg" alt=""></div>
         <nav class="navbar navbar-expand-md navbar-dark"><a class="navbar-brand abs mr-auto" href="#"><img
-                    src="Assets/-e-logo zonex.svg" class="logo-zonex"></a><button
-                class="navbar-toggler order-first" type="button" data-toggle="collapse"
-                data-target="#collapsingNavbar"><img src="Assets/-e-canvas menu.svg" alt=""></button>
+                    src="Assets/-e-logo zonex.svg" class="logo-zonex"></a><button class="navbar-toggler order-first"
+                type="button" data-toggle="collapse" data-target="#collapsingNavbar"><img
+                    src="Assets/-e-canvas menu.svg" alt=""></button>
             <div class="navbar-collapse collapse" id="collapsingNavbar">
                 <ul class="navbar-nav" style="font-weight:700">
-                    <li class="nav-item active"><a class="nav-link" href="#" style="color:#000">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" style="color:#000">Shop</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="collapse"
+                    <li class="nav-item active"><a class="nav-link decorate" href="#" style="color:#000">Home</a></li>
+                    <li class="nav-item"><a class="nav-link decorate" href="#" style="color:#000">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link decorate" href="#" data-toggle="collapse"
                             style="color:#000">Elements</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="collapse" style="color:#000">Blog</a>
+                    <li class="nav-item"><a class="nav-link decorate" href="#" data-toggle="collapse" style="color:#000">Blog</a>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-toggle="collapse" style="color:#000">Page</a>
+                    <li class="nav-item"><a class="nav-link decorate" href="#" data-toggle="collapse" style="color:#000">Page</a>
                     </li>
                 </ul>
             </div>
@@ -86,7 +85,7 @@
     <main class="items">
         <h1 class="text-center">New Arrivals</h1>
         <div class="container">
-            <div class="row img-fluid">
+            <div class="row" id="clothes">
                 <div class="col-6 col-md-3 Place"><img src="https://via.placeholder.com/309x390" alt="">
                     <p><img src="Assets/-e-kz-bolt-line.svg" alt=""> New</p>
                     <p>Eye Mesh Boat Shoes</p>
@@ -130,7 +129,7 @@
             </div>
         </div>
     </main>
-    <section class="all-products container"><button><span>All Products</span></button></section>
+    <section class="all-products container"><button id="btn-products"><span>All Products</span></button></section>
     <section class="">
         <div class="container">
             <div class="row no-gutters" style="position:relative"><img src="https://via.placeholder.com/547x630" alt=""
@@ -145,36 +144,37 @@
             </div>
         </div>
     </section>
-    <section class="newsletter">
-        <div>
-            <h1>Our newsletter</h1>
-            <p>Join our list and get 15% off your first purchase!</p>
-            <form action=""><input class="entry" placeholder="Email address" size="50"><span
-                    class="sub">subscribe</span>
-                <div style="margin-right:250px">*Don’t worry we don’t spam</div>
-            </form>
-        </div>
-    </section>
+    <div class="newsletter" id="newsletter">
+        <h3 class="newsletter__title">Our newsletter</h3>
+        <p class="newsletter__description">Join our list and get 15% off your first purchase!</p>
+        <form class="newsletter__form">
+          <input class="newsletter__form__input" type="text" required placeholder="Email Address" />
+          <button class="newsletter__form__button" type="submit">Subscribe</button>
+          <p class="newsletter__form__info">*Don’t worry we don’t spam</p>
+        </form>
+      </div>
+
+      
     <footer class="container">
         <div class="row">
-            <div class="icons col-md-4"><img src="Assets/-e-kz-facebook.svg" alt=""> <img
-                    src="Assets/-e-kz-twitter.svg" alt=""> <img
-                    src="Assets/-e-kz-instagram.svg" alt=""> <img
-                    src="Assets/-e-kz-pinterest.svg" alt=""></div>
+            <div class="icons col-md-4"><img src="Assets/-e-kz-facebook.svg" alt=""> <img src="Assets/-e-kz-twitter.svg"
+                    alt=""> <img src="Assets/-e-kz-instagram.svg" alt=""> <img src="Assets/-e-kz-pinterest.svg" alt="">
+            </div>
             <div class="Policy col-md-4"><span>Returns Policy</span> <span>Privacy Policy</span> <span>Privacy
                     Policy</span></div>
-            <div class="col-md-4 info"><span>Currency <strong class="blacky">USD</strong> <img src="Assets/-e-kz-angle-down.svg" alt=""></span>
-            <span>   Language
-                <strong class="blacky">  ENGLISH</strong><img src="Assets/-e-kz-angle-down.svg" alt=""></span></div>
+            <div class="col-md-4 info"><span>Currency <strong class="blacky">USD</strong> <img
+                        src="Assets/-e-kz-angle-down.svg" alt=""></span>
+                <span> Language
+                    <strong class="blacky"> ENGLISH</strong><img src="Assets/-e-kz-angle-down.svg" alt=""></span></div>
         </div>
     </footer>
     <footer class="container end">
         <div class="row">
-            <div class="col-md-6">&copy;<strong>2019 Zonex All rights reserved</strong></div>
+            <div class="col-md-6">&copy;<strong><span id="place-tochange"></span> Zonex All rights reserved</strong></div>
             <div class="col-md-6"><img src="Assets/-e-payment.svg" alt=""></div>
         </div>
     </footer>
-    
+
 </body>
 
 </html>

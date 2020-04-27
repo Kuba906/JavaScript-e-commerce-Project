@@ -1,12 +1,7 @@
 import './styles/style.scss';
-import $ from 'jquery';
-global.jQuery = $;
-global.$ = $;
-
-import Popper from 'popper.js'
-global.Popper = Popper
 import 'bootstrap';
+import footer from './scripts/footer';
 
-import script from './script.js'
-
-script();
+window.addEventListener("DOMContentLoaded", function(event){
+    footer();
+});
