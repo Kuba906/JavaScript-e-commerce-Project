@@ -1,7 +1,5 @@
 import './styles/style.scss';
 import 'bootstrap';
-import footer from './scripts/footer';
+import main_module from './scripts/main_module';
 
-window.addEventListener("DOMContentLoaded", function(event){
-    footer();
-});
+main_module();

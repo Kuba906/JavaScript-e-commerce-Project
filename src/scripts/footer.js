@@ -1,5 +1,5 @@
 export default function (){
 
-    const footerYearContainer = document.getElementById('place-tochange');
-    footerYearContainer.innerHTML = new Date().getFullYear();
+    const year = new Date().getFullYear();
+    document.getElementById('place-tochange').innerHTML=year;
 }

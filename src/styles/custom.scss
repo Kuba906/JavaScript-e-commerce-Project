@@ -22,7 +22,8 @@ body {
 .nav-link {
     color: black;
 }
-.decorate:hover{
+
+.decorate:hover {
     text-decoration: underline;
 }
 
@@ -205,7 +206,7 @@ body {
 
 
     .Place {
-       max-width: 100%;
+        max-width: 100%;
 
         img {
             max-width: 100%;
@@ -220,7 +221,7 @@ body {
     margin-bottom: 20px;
 
     button {
-        
+
         background-color: #fff;
         padding: 15px;
         border: 2px solid $black-color;
@@ -228,60 +229,69 @@ body {
     }
 }
 
-.all-products button:hover{
-    cursor:pointer;
+.all-products button:hover {
+    cursor: pointer;
     background-color: rgba(69, 69, 69, 0.5);
     color: white;
+    transition: 0.3s;
 }
 
-.newsletter{
-    width:649px;
-    max-width:100%;
+.newsletter {
+    width: 649px;
+    max-width: 100%;
     margin: 0 auto;
-    padding-bottom:97px;
-     @media all and (max-width:650px){
-      width:95%; 
-      padding-bottom:37px;
+    padding-bottom: 97px;
+
+    @media all and (max-width:650px) {
+        width: 95%;
+        padding-bottom: 37px;
     }
-    &__title{
-        margin-top:98px;
-        font-size:2rem;
-        text-align:center;
-        font-weight:bold;
+
+    &__title {
+        margin-top: 98px;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
     }
-    &__description{
-        color:#454545;
-        font-size:1rem;
-        margin-top:35px;
-        text-align:center;
+
+    &__description {
+        color: #454545;
+        font-size: 1rem;
+        margin-top: 35px;
+        text-align: center;
     }
-    &__form{
-        margin-top:69px;
+
+    &__form {
+        margin-top: 69px;
         position: relative;
-        &__input{
-            width:100%;
-            border:none;
-            border-bottom:2px solid black;
-            padding-bottom:13px;
-            font-size:1rem;
-            &::placeholder{
-                color:rgba(69, 69, 69, 0.5);
+
+        &__input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid black;
+            padding-bottom: 13px;
+            font-size: 1rem;
+
+            &::placeholder {
+                color: rgba(69, 69, 69, 0.5);
                 font-size: 1rem;
             }
         }
-        &__button{
+
+        &__button {
             position: absolute;
-            right:10px;
-            top:0;
-            font-size:1rem;
-            outline:none;
-            background-color:rgba(0,0,0,0);
-            border:none;
+            right: 10px;
+            top: 0;
+            font-size: 1rem;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
             font-weight: 500;
         }
-        &__info{
-            margin-top:24px;
-            font-size:1rem;
+
+        &__info {
+            margin-top: 24px;
+            font-size: 1rem;
             color: black;
         }
     }
@@ -301,7 +311,7 @@ footer {
     .Policy {
         padding: auto;
         font-weight: 500;
-        display:flex;
+        display: flex;
         justify-content: space-between;
 
         span {
@@ -312,12 +322,47 @@ footer {
 }
 
 .info {
-    display:flex;
-        justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 
 
 }
 
 .end {
     margin: 50px 0;
+}
+
+#arrow-top {
+
+    background-color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    right: 50px;
+
+    @media(max-width: 800px) {
+        right: 10px;
+    }
+
+    transform: translate(0, -50%);
+    z-index: 15;
+    cursor: pointer;
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+#arrow-top:hover {
+
+    background-color: #ccc;
+    border: 1px solid #222;
+    transition: 0.3s;
+
 }
