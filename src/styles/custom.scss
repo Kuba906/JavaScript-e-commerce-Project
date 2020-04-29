@@ -120,10 +120,12 @@ body {
 }
 @media (max-width: 800px) {
     .Sbutton {
+        display: none;
        
         top: 5%;
    }
 }
+
 #left {
     left: 2%;
     transform: translate(50%, -50%);
