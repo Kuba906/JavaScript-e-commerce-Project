@@ -8,7 +8,7 @@ export default function () {
      const   right = document.getElementById('right')
      const   left = document.getElementById('left');
 
-    const padding = 5;
+    const padding = -500;
     var wv = carousel.offsetWidth;
 
     right.addEventListener('click', e => {
