@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+#arrow-top {
+
+    background-color: #fff;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    right: 50px;
+
+    @media(max-width: 800px) {
+        right: 10px;
+    }
+
+    transform: translate(0, -50%);
+    z-index: 15;
+    cursor: pointer;
+
+    .arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+#arrow-top:hover {
+
+    background-color: #ccc;
+    border: 1px solid #222;
+    transition: 0.3s;
+
+}

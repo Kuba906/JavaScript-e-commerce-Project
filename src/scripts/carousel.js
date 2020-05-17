@@ -1,4 +1,4 @@
-export default function () {
+export default function (items) {
 
 
     const carousel = document.getElementById('carousel')
@@ -22,6 +22,13 @@ export default function () {
 
 
     window.addEventListener('resize', e => (wv = carousel.offsetWidth));
-
+    var x=document.querySelectorAll(".replace");
+    for(let i=0;i<x.length;i++){
+        x[i].src=`http://${items[i].imageUrl}`;
+        x[i].style.width="268px";
+        x[i].style.height="338px"
+      
+    }
+    
 
 }

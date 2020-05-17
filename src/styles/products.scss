@@ -1,0 +1,20 @@
+.all-products {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    button {
+
+        background-color: #fff;
+        padding: 15px;
+        border: 2px solid $black-color;
+
+    }
+}
+
+.all-products button:hover {
+    cursor: pointer;
+    background-color: rgba(69, 69, 69, 0.5);
+    color: white;
+    transition: 0.3s;
+}

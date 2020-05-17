@@ -1,0 +1,60 @@
+.newsletter {
+    width: 649px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 97px;
+
+    @media all and (max-width:650px) {
+        width: 95%;
+        padding-bottom: 37px;
+    }
+
+    &__title {
+        margin-top: 98px;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    &__description {
+        color: #454545;
+        font-size: 1rem;
+        margin-top: 35px;
+        text-align: center;
+    }
+
+    &__form {
+        margin-top: 69px;
+        position: relative;
+
+        &__input {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid black;
+            padding-bottom: 13px;
+            font-size: 1rem;
+
+            &::placeholder {
+                color: rgba(69, 69, 69, 0.5);
+                font-size: 1rem;
+            }
+        }
+
+        &__button {
+            position: absolute;
+            right: 10px;
+            top: 0;
+            font-size: 1rem;
+            outline: none;
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            font-weight: 500;
+        }
+
+        &__info {
+            margin-top: 24px;
+            font-size: 1rem;
+            color: black;
+        }
+    }
+}

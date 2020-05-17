@@ -1,0 +1,45 @@
+.image {
+    background-image: url("https://i.picsum.photos/id/466/1920/550.jpg");
+    background-size: auto 550px;
+    height: 550px;
+    background-position: center center;
+    font-weight: 500;
+
+}
+
+.nav-link {
+    color: black;
+}
+
+.decorate:hover {
+    text-decoration: underline;
+}
+
+.second {
+    background-color: #03ffee;
+    height: 438px;
+}
+
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
