@@ -7,6 +7,8 @@ import carousel from './scripts/carousel';
 import fetchdata from './scripts/fetchdata';
 import maincontent from './scripts/maincontent';
 import specialoffer from './scripts/specialoffer';
+import load from './scripts/load';
+
 
 function start(){
 
@@ -21,9 +23,10 @@ function start(){
             specialoffer(response);
 
         }).catch(err=>{
-            console.log("can't load content")
+            alert("can't load content");
         }).finally(()=>{
             console.log("content has already loaded")
+            load();
         })
         scrollToTop();
         footer();
