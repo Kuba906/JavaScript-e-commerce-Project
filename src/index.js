@@ -7,29 +7,31 @@ import carousel from './scripts/carousel';
 import fetchdata from './scripts/fetchdata';
 import maincontent from './scripts/maincontent';
 import specialoffer from './scripts/specialoffer';
+import hideloader from './scripts/loader';
 import load from './scripts/load';
 
 
-function start(){
+function start() {
 
-    window.addEventListener("DOMContentLoaded", function(event){
-       
-        fetchdata().then(response=>{
-            
+    window.addEventListener("DOMContentLoaded", function(event) {
+
+        fetchdata().then(response => {
+
             products(response);
-            
+
             carousel(response);
             maincontent(response);
             specialoffer(response);
 
-        }).catch(err=>{
+        }).catch(err => {
             alert("can't load content");
-        }).finally(()=>{
+        }).finally(() => {
             console.log("content has already loaded")
+            hideloader();
             load();
         })
         scrollToTop();
         footer();
     });
-    }
-    start()
+}
+start()
